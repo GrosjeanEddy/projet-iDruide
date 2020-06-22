@@ -1,0 +1,114 @@
+*
+{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Roboto", sans-serif;
+  background: #130f40;
+}
+
+.input{
+  text-align: center;
+  margin: 100px auto;
+}
+
+input
+{
+	outline: none;
+}
+
+input[type="submit"]{
+  padding: 15px 30px;
+  background: #ff4757;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight:bold;
+  font-size: 20px;
+  transition: background 0.4s ease-in-out;
+  outline: none;
+  margin-left: 50px;
+}
+
+input.submit:hover
+{
+	background: #EA2027;
+}
+
+.input input[type="text"]{
+  width: 450px;
+  height: 55px;
+  padding: 5px 10px;
+  border-bottom-color: white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 3px;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  color: white;
+  background: #130f40;
+}
+
+input::placeholder
+{
+	color : white;
+}
+
+.card{
+  width: 50%;
+  background: #130f40;
+  height: 50vh;
+  margin: 50px auto;
+  border-radius: 2px;
+}
+
+.card h1{
+  padding: 25px 0;
+  text-align: center;
+  color: white;
+}
+
+.card p{
+  text-align: center;
+  margin:20px 0;
+  font-size:20px;
+  color: white;
+}
+
+img
+{
+	height: 50px;
+	width: 50px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.heading
+{
+	text-align: center;
+	padding-top: 20px;
+	font-size: 25px;
+	color: #f5f6fa;
+}
+
+footer
+{
+	position: absolute;
+	margin-bottom: 10px;
+	font-family: "Roboto", sans-serif;
+	color: white;
+	padding-left: 50px;
+	margin-top: 50px;
+}
+
+@media screen and (max-width: 650px) 
+{
+  input.submit {
+    margin-top: 30px;
+  }
+}
