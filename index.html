@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>OpenWeatherMap</title>
 	<link rel="stylesheet" href="css/style.css">
+	
 </head>
 <body>
 	<div class="heading">
@@ -13,16 +14,19 @@
 
 	<div class="input">
 		<input type="text" placeholder="Search for a city" class="input_text">
-		<input type="submit" value="Submit" class="submit" id="submit">
+		<input type="submit" value="Submit" class="submit">
 	</div>
 </div>
 
 <div class="container">
 	<div class="card">
 		<h1 class="name" id="name"></h1>
+		<p class="date"></p>
 		<p class="icon"></p>
 		<p class="desc"></p>
-		<p class="temp"></p>
+		<div class="temp_card">	
+			<p class="temp"></p>
+		</div>
 	</div>
 </div>
 

@@ -62,8 +62,8 @@ input::placeholder
 .card{
   width: 50%;
   background: #130f40;
-  height: 50vh;
-  margin: 50px auto;
+  height: 45vh;
+  margin: 30px auto;
   border-radius: 2px;
 }
 
@@ -78,6 +78,10 @@ input::placeholder
   margin:20px 0;
   font-size:20px;
   color: white;
+}
+
+p.temp{
+  font-size: 45px;
 }
 
 img
