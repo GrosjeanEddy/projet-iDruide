@@ -3,10 +3,12 @@ var city_name = document.querySelector('#name');
 var temp = document.querySelector('.temp');
 var desc = document.querySelector('.desc');
 var icon = document.querySelector('.icon');
+var date = document.querySelector('.date');
 var button = document.querySelector('.submit');
+var card = document.getElementById(showCard);
 
 const url_api = "https://api.openweathermap.org/data/2.5/weather?q=";
-key_api = "50a7aa80fa492fa92e874d23ad061374";
+const key_api = "50a7aa80fa492fa92e874d23ad061374";
 const url_icon = "https://openweathermap.org/img/w/";
 const extend_url = ".png";
 
@@ -28,14 +30,26 @@ fetch(url_api+input.value+'&lang=fr&units=metric&appid='+key_api)
   var nameValue = data.name+', '+data.sys.country;
   var descValue = data['weather'][0]['description'];
   var iconValue = url_icon+data['weather'][0]['icon']+extend_url;
-
+  
+ 
   city_name.innerHTML = nameValue;
-  desc.innerHTML = descValue;
+  desc.innerHTML = ucFirst(descValue);
   temp.innerHTML = Math.round(tempValue)+ "°C";
   icon.innerHTML = "<img src="+iconValue+">";
+  date.innerHTML = getCurrentDate();
   input.value ="";
-
+  
 })
 
 .catch(err => alert(mess_err));
+}
+
+function ucFirst(str){
+  return (str+'').charAt(0).toUpperCase()+str.substr(1);
+}
+
+function getCurrentDate(){
+  var fullDate = new Date();
+  
+  return fullDate.getDate()+"/"+(fullDate.getMonth()+1)+"/"+fullDate.getFullYear();
 }
