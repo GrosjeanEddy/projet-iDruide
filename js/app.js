@@ -4,6 +4,9 @@ var temp = document.querySelector('.temp');
 var desc = document.querySelector('.desc');
 var icon = document.querySelector('.icon');
 var button = document.querySelector('.submit');
+
+const url_api = "https://api.openweathermap.org/data/2.5/weather?q=";
+key_api = "50a7aa80fa492fa92e874d23ad061374";
 const url_icon = "https://openweathermap.org/img/w/";
 const extend_url = ".png";
 
@@ -12,13 +15,13 @@ const mess_err = "Wrong city name, retry.";
 button.addEventListener('click', getWeather);
 
 input.addEventListener('keypress', function(event){
-	if (event.key == 'Enter') {
+  if (event.key == 'Enter') {
 		getWeather();
 	}
 })
 
 function getWeather(){
-fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&lang=fr&units=metric&appid=50a7aa80fa492fa92e874d23ad061374')
+fetch(url_api+input.value+'&lang=fr&units=metric&appid='+key_api)
 .then(response => response.json())
 .then(data => {
   var tempValue = data.main.temp;
