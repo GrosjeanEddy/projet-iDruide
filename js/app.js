@@ -5,7 +5,7 @@ var desc = document.querySelector('.desc');
 var icon = document.querySelector('.icon');
 var date = document.querySelector('.date');
 var button = document.querySelector('.submit');
-var card = document.getElementById(showCard);
+/*var card = document.getElementById(showCard);*/
 
 const url_api = "https://api.openweathermap.org/data/2.5/weather?q=";
 const key_api = "50a7aa80fa492fa92e874d23ad061374";
