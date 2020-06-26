@@ -8,7 +8,8 @@ var button = document.querySelector('.submit');
 /*var card = document.getElementById(showCard);*/
 
 const url_api = "https://api.openweathermap.org/data/2.5/weather?q=";
-const key_api = "50a7aa80fa492fa92e874d23ad061374";
+/*const key_api = "50a7aa80fa492fa92e874d23ad061374";*/
+const key_api = "2108ed8553316a563d7f6c52ea80f2be"; // new api key
 const url_icon = "https://openweathermap.org/img/w/";
 const extend_url = ".png";
 
@@ -23,7 +24,7 @@ input.addEventListener('keypress', function(event){
 })
 
 function getWeather(){
-fetch(url_api+input.value+'&lang=fr&units=metric&appid='+key_api)
+fetch(url_api+input.value+'&lang=fr&units=metric&APPID='+key_api)
 .then(response => response.json())
 .then(data => {
   var tempValue = data.main.temp;
@@ -31,7 +32,7 @@ fetch(url_api+input.value+'&lang=fr&units=metric&appid='+key_api)
   var descValue = data['weather'][0]['description'];
   var iconValue = url_icon+data['weather'][0]['icon']+extend_url;
   
- 
+ console.log(data);
   city_name.innerHTML = nameValue;
   desc.innerHTML = ucFirst(descValue);
   temp.innerHTML = Math.round(tempValue)+ "°C";
